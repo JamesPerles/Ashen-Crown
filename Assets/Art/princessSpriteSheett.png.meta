@@ -1,0 +1,2951 @@
+fileFormatVersion: 2
+guid: 37ca405a414929644ac4b9719d641ccc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8301660050772891051
+    second: princessSpriteSheett_0
+  - first:
+      213: 7541803170329266216
+    second: princessSpriteSheett_1
+  - first:
+      213: -7493127567261788251
+    second: princessSpriteSheett_2
+  - first:
+      213: 8546439710406091631
+    second: princessSpriteSheett_3
+  - first:
+      213: -5992705903031687371
+    second: princessSpriteSheett_4
+  - first:
+      213: -2762589861410356583
+    second: princessSpriteSheett_5
+  - first:
+      213: 2492581810869975531
+    second: princessSpriteSheett_6
+  - first:
+      213: -987184782383924962
+    second: princessSpriteSheett_7
+  - first:
+      213: 9066171074371947344
+    second: princessSpriteSheett_8
+  - first:
+      213: -5377679641341342674
+    second: princessSpriteSheett_9
+  - first:
+      213: 6750256779367307610
+    second: princessSpriteSheett_10
+  - first:
+      213: 1432631025452588231
+    second: princessSpriteSheett_11
+  - first:
+      213: -5743460187358275092
+    second: princessSpriteSheett_12
+  - first:
+      213: 4799281113767334036
+    second: princessSpriteSheett_13
+  - first:
+      213: 6558021962710034163
+    second: princessSpriteSheett_14
+  - first:
+      213: 5817576781759233321
+    second: princessSpriteSheett_15
+  - first:
+      213: -8788354549214857579
+    second: princessSpriteSheett_16
+  - first:
+      213: -7450283301054143255
+    second: princessSpriteSheett_17
+  - first:
+      213: 5294509999579661666
+    second: princessSpriteSheett_18
+  - first:
+      213: 2820696097750523905
+    second: princessSpriteSheett_19
+  - first:
+      213: -9176531096035345786
+    second: princessSpriteSheett_20
+  - first:
+      213: -7539571249013784964
+    second: princessSpriteSheett_21
+  - first:
+      213: 7403591269037077917
+    second: princessSpriteSheett_22
+  - first:
+      213: -8273186774561511948
+    second: princessSpriteSheett_23
+  - first:
+      213: -8243471044064871268
+    second: princessSpriteSheett_24
+  - first:
+      213: -3256491827147310972
+    second: princessSpriteSheett_25
+  - first:
+      213: 1790530623344429028
+    second: princessSpriteSheett_26
+  - first:
+      213: -1159314646807329266
+    second: princessSpriteSheett_27
+  - first:
+      213: 9162404462962863141
+    second: princessSpriteSheett_28
+  - first:
+      213: -4873583669187836539
+    second: princessSpriteSheett_29
+  - first:
+      213: 7555427473715492478
+    second: princessSpriteSheett_30
+  - first:
+      213: 5379671617925997191
+    second: princessSpriteSheett_31
+  - first:
+      213: 4039024789141751829
+    second: princessSpriteSheett_32
+  - first:
+      213: -1584323859131815014
+    second: princessSpriteSheett_33
+  - first:
+      213: 5664069571806118216
+    second: princessSpriteSheett_34
+  - first:
+      213: 8942642710687516114
+    second: princessSpriteSheett_35
+  - first:
+      213: -5168592650871071739
+    second: princessSpriteSheett_36
+  - first:
+      213: -819368292806990052
+    second: princessSpriteSheett_37
+  - first:
+      213: 6386370782353628485
+    second: princessSpriteSheett_38
+  - first:
+      213: -6491974160580704303
+    second: princessSpriteSheett_39
+  - first:
+      213: -8013252525851814259
+    second: princessSpriteSheett_40
+  - first:
+      213: -3865574655351090512
+    second: princessSpriteSheett_41
+  - first:
+      213: -4315943398702118089
+    second: princessSpriteSheett_42
+  - first:
+      213: -1854257755122848675
+    second: princessSpriteSheett_43
+  - first:
+      213: -391059892027572987
+    second: princessSpriteSheett_44
+  - first:
+      213: -4193712010367258583
+    second: princessSpriteSheett_45
+  - first:
+      213: -4777868173437974331
+    second: princessSpriteSheett_46
+  - first:
+      213: 3942123569944421322
+    second: princessSpriteSheett_47
+  - first:
+      213: 3106101836865035054
+    second: princessSpriteSheett_48
+  - first:
+      213: -4079774622479133546
+    second: princessSpriteSheett_49
+  - first:
+      213: 6521915274555939754
+    second: princessSpriteSheett_50
+  - first:
+      213: -3866312645951158825
+    second: princessSpriteSheett_51
+  - first:
+      213: 4584518498301064938
+    second: princessSpriteSheett_52
+  - first:
+      213: -1648622404607225649
+    second: princessSpriteSheett_53
+  - first:
+      213: 2471636361666522353
+    second: princessSpriteSheett_54
+  - first:
+      213: 2916218646621364243
+    second: princessSpriteSheett_55
+  - first:
+      213: 225741209437640905
+    second: princessSpriteSheett_56
+  - first:
+      213: 969496525151550466
+    second: princessSpriteSheett_57
+  - first:
+      213: -4226991737724152632
+    second: princessSpriteSheett_58
+  - first:
+      213: 5178360427721202944
+    second: princessSpriteSheett_59
+  - first:
+      213: 1170027363754621500
+    second: princessSpriteSheett_60
+  - first:
+      213: -3390368034764252318
+    second: princessSpriteSheett_61
+  - first:
+      213: 4555209485624585043
+    second: princessSpriteSheett_62
+  - first:
+      213: 7816481205052471507
+    second: princessSpriteSheett_63
+  - first:
+      213: -5650009156003588092
+    second: princessSpriteSheett_64
+  - first:
+      213: 7683055608469528202
+    second: princessSpriteSheett_65
+  - first:
+      213: 7878994055303637403
+    second: princessSpriteSheett_66
+  - first:
+      213: -2443901936979721942
+    second: princessSpriteSheett_67
+  - first:
+      213: 7291568427241198552
+    second: princessSpriteSheett_68
+  - first:
+      213: -1621345904054817662
+    second: princessSpriteSheett_69
+  - first:
+      213: 3546100807967748840
+    second: princessSpriteSheett_70
+  - first:
+      213: 4455705983056154731
+    second: princessSpriteSheett_71
+  - first:
+      213: 883431306907624004
+    second: princessSpriteSheett_72
+  - first:
+      213: -9107058308293345033
+    second: princessSpriteSheett_73
+  - first:
+      213: -8722910412905687780
+    second: princessSpriteSheett_74
+  - first:
+      213: 5678117198538359456
+    second: princessSpriteSheett_75
+  - first:
+      213: 320437422048442194
+    second: princessSpriteSheett_76
+  - first:
+      213: -7833768800428843288
+    second: princessSpriteSheett_77
+  - first:
+      213: -3178650116941476063
+    second: princessSpriteSheett_78
+  - first:
+      213: -3959619543378344572
+    second: princessSpriteSheett_79
+  - first:
+      213: 8551776154529418076
+    second: princessSpriteSheett_80
+  - first:
+      213: -3699570479578770380
+    second: princessSpriteSheett_81
+  - first:
+      213: 7538790392220616943
+    second: princessSpriteSheett_82
+  - first:
+      213: 5173459316341792845
+    second: princessSpriteSheett_83
+  - first:
+      213: -1587799523826743345
+    second: princessSpriteSheett_84
+  - first:
+      213: 328120578142833370
+    second: princessSpriteSheett_85
+  - first:
+      213: 734619324013907153
+    second: princessSpriteSheett_86
+  - first:
+      213: 669107909014043951
+    second: princessSpriteSheett_87
+  - first:
+      213: 3775270616104356865
+    second: princessSpriteSheett_88
+  - first:
+      213: -6847073622354878713
+    second: princessSpriteSheett_89
+  - first:
+      213: -3900984692211987508
+    second: princessSpriteSheett_90
+  - first:
+      213: -244798684119691178
+    second: princessSpriteSheett_91
+  - first:
+      213: 5641852527999375214
+    second: princessSpriteSheett_92
+  - first:
+      213: -621293258768945895
+    second: princessSpriteSheett_93
+  - first:
+      213: 7769049564461116107
+    second: princessSpriteSheett_94
+  - first:
+      213: -7877743183163158495
+    second: princessSpriteSheett_95
+  - first:
+      213: -2698768206976360893
+    second: princessSpriteSheett_96
+  - first:
+      213: -4352092137800004520
+    second: princessSpriteSheett_97
+  - first:
+      213: 2980460344981384028
+    second: princessSpriteSheett_98
+  - first:
+      213: -2566336560526342863
+    second: princessSpriteSheett_99
+  - first:
+      213: -3312307600944510073
+    second: princessSpriteSheett_100
+  - first:
+      213: -7248883878626112892
+    second: princessSpriteSheett_101
+  - first:
+      213: -2658300171855012104
+    second: princessSpriteSheett_102
+  - first:
+      213: 7302208356485040705
+    second: princessSpriteSheett_103
+  - first:
+      213: -5966706101356275078
+    second: princessSpriteSheett_104
+  - first:
+      213: 2504047981040054152
+    second: princessSpriteSheett_105
+  - first:
+      213: -369237847959657404
+    second: princessSpriteSheett_106
+  - first:
+      213: -6941490272159486030
+    second: princessSpriteSheett_107
+  - first:
+      213: 3725654706709809719
+    second: princessSpriteSheett_108
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: princessSpriteSheett_0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2459
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a61abfa249acc80800000000000000
+      internalID: -8301660050772891051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_1
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 2459
+        width: 162
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8280465760ed9a860800000000000000
+      internalID: 7541803170329266216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_2
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2459
+        width: 162
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a79ca88d20130890800000000000000
+      internalID: -7493127567261788251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_3
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 2459
+        width: 162
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f632c09b2ad0b9670800000000000000
+      internalID: 8546439710406091631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_4
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 2459
+        width: 162
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537e86e5bb1a5dca0800000000000000
+      internalID: -5992705903031687371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_5
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 2459
+        width: 162
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9924a8a682f49a9d0800000000000000
+      internalID: -2762589861410356583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_6
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 2459
+        width: 162
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9318263fd679220800000000000000
+      internalID: 2492581810869975531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_7
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 2456
+        width: 162
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19b556bba0dc42f0800000000000000
+      internalID: -987184782383924962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_8
+      rect:
+        serializedVersion: 2
+        x: 3434
+        y: 2459
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b8cd8be8281dd70800000000000000
+      internalID: 9066171074371947344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_9
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 2459
+        width: 157
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ccffdbbd4ae55b0800000000000000
+      internalID: -5377679641341342674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_10
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2159
+        width: 157
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a595cd4c6cabdad50800000000000000
+      internalID: 6750256779367307610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_11
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 2159
+        width: 157
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc1e46c35ab1e310800000000000000
+      internalID: 1432631025452588231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_12
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 2159
+        width: 152
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce959e6c3612b40b0800000000000000
+      internalID: -5743460187358275092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_13
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 2159
+        width: 137
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490d75bceb87a9240800000000000000
+      internalID: 4799281113767334036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_14
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 2159
+        width: 137
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6aa8caa36c20b50800000000000000
+      internalID: 6558021962710034163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_15
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 2159
+        width: 152
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92db15a924f2cb050800000000000000
+      internalID: 5817576781759233321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_16
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 2159
+        width: 162
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5963cd5a91e790680800000000000000
+      internalID: -8788354549214857579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_17
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 2159
+        width: 162
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4a4ac9fc64b9890800000000000000
+      internalID: -7450283301054143255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_18
+      rect:
+        serializedVersion: 2
+        x: 3434
+        y: 2159
+        width: 162
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26503b80bc0e97940800000000000000
+      internalID: 5294509999579661666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_19
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 2159
+        width: 162
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10020cdf720252720800000000000000
+      internalID: 2820696097750523905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1859
+        width: 162
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68abc76669966a080800000000000000
+      internalID: -9176531096035345786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_21
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1854
+        width: 147
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ef8c735ef0e5790800000000000000
+      internalID: -7539571249013784964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_22
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1844
+        width: 147
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9573258807deb660800000000000000
+      internalID: 7403591269037077917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_23
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1844
+        width: 147
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f52dc5367cbf2d80800000000000000
+      internalID: -8273186774561511948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_24
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1849
+        width: 142
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c7b4ed2ce499d80800000000000000
+      internalID: -8243471044064871268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_25
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1844
+        width: 147
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488fbe4dfed9ec2d0800000000000000
+      internalID: -3256491827147310972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_26
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 1849
+        width: 142
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e747e38d1e39d810800000000000000
+      internalID: 1790530623344429028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_27
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 1844
+        width: 147
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e064426987949efe0800000000000000
+      internalID: -1159314646807329266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_28
+      rect:
+        serializedVersion: 2
+        x: 3434
+        y: 1844
+        width: 162
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cea578056672f70800000000000000
+      internalID: 9162404462962863141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_29
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 1844
+        width: 162
+        height: 202
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5850ae6697d8d5cb0800000000000000
+      internalID: -4873583669187836539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_30
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1544
+        width: 167
+        height: 202
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e76f909c1454ad860800000000000000
+      internalID: 7555427473715492478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_31
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1544
+        width: 167
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782eab275de68aa40800000000000000
+      internalID: 5379671617925997191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_32
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1544
+        width: 157
+        height: 202
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5188ac365af7d0830800000000000000
+      internalID: 4039024789141751829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_33
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 1559
+        width: 162
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ba54f18d9530ae0800000000000000
+      internalID: -1584323859131815014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_34
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1564
+        width: 152
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8414a9a1441da9e40800000000000000
+      internalID: 5664069571806118216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_35
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1564
+        width: 147
+        height: 162
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d504cb4a26aa1c70800000000000000
+      internalID: 8942642710687516114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_36
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1569
+        width: 157
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c92205e587548b0800000000000000
+      internalID: -5168592650871071739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_37
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 1549
+        width: 157
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c17650ff0e401a4f0800000000000000
+      internalID: -819368292806990052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_38
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 1559
+        width: 162
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d1f1ed362f0a850800000000000000
+      internalID: 6386370782353628485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_39
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 1574
+        width: 147
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7829b95efd7e5a0800000000000000
+      internalID: -6491974160580704303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_40
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1279
+        width: 152
+        height: 107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86d915a8453bc090800000000000000
+      internalID: -8013252525851814259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_41
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b29b07e458ba5ac0800000000000000
+      internalID: -3865574655351090512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_42
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b0ba18850ba14c0800000000000000
+      internalID: -4315943398702118089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_43
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ca3ef556a5446e0800000000000000
+      internalID: -1854257755122848675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_44
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d3bc1a91da29af0800000000000000
+      internalID: -391059892027572987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_45
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92035c35521fcc5c0800000000000000
+      internalID: -4193712010367258583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_46
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8c592e53a91bdb0800000000000000
+      internalID: -4777868173437974331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_47
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 1259
+        width: 162
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac36b37208c35b630800000000000000
+      internalID: 3942123569944421322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_48
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 1249
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b578ee9271b1b20800000000000000
+      internalID: 3106101836865035054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_49
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 1249
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6945a7fa89ab167c0800000000000000
+      internalID: -4079774622479133546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_50
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 1209
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aabd91b336f728a50800000000000000
+      internalID: 6521915274555939754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_51
+      rect:
+        serializedVersion: 2
+        x: 4044
+        y: 1209
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d50b731229185ac0800000000000000
+      internalID: -3866312645951158825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_52
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 919
+        width: 162
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6317dc84b7f9f30800000000000000
+      internalID: 4584518498301064938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_53
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 919
+        width: 187
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0d2a468aaee19e0800000000000000
+      internalID: -1648622404607225649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_54
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 924
+        width: 202
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc6217fc240d4220800000000000000
+      internalID: 2471636361666522353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_55
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 924
+        width: 202
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310ac37886d787820800000000000000
+      internalID: 2916218646621364243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_56
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 924
+        width: 202
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c892b71f6ef12300800000000000000
+      internalID: 225741209437640905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_57
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 924
+        width: 207
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c32a8f3f7547d00800000000000000
+      internalID: 969496525151550466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_58
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 924
+        width: 207
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4d07cf865b655c0800000000000000
+      internalID: -4226991737724152632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_59
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 924
+        width: 207
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d13457f5b3dd740800000000000000
+      internalID: 5178360427721202944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_60
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 919
+        width: 217
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ab41230b5cc3010800000000000000
+      internalID: 1170027363754621500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_61
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 919
+        width: 217
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b990e3c3ef2f0d0800000000000000
+      internalID: -3390368034764252318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_62
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 619
+        width: 217
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ba42484ea573f30800000000000000
+      internalID: 4555209485624585043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_63
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 614
+        width: 227
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d87ba41e38b97c60800000000000000
+      internalID: 7816481205052471507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_64
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 614
+        width: 227
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40893be8b922791b0800000000000000
+      internalID: -5650009156003588092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_65
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 629
+        width: 242
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e166c8e52bf9a60800000000000000
+      internalID: 7683055608469528202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_66
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 649
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99a9cd395fc75d60800000000000000
+      internalID: 7878994055303637403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_67
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 709
+        width: 52
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a214f6cf224851ed0800000000000000
+      internalID: -2443901936979721942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_68
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 659
+        width: 172
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d35a292adad03560800000000000000
+      internalID: 7291568427241198552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_69
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 649
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c27c29d72df79e0800000000000000
+      internalID: -1621345904054817662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_70
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 649
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2b4a495e7463130800000000000000
+      internalID: 3546100807967748840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_71
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 649
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6015a7fbf8d5dd30800000000000000
+      internalID: 4455705983056154731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_72
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 649
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44220bfc714924c00800000000000000
+      internalID: 883431306907624004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_73
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 609
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0c76948ba3d9180800000000000000
+      internalID: -9107058308293345033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_74
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 609
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c155337023ff1f680800000000000000
+      internalID: -8722910412905687780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_75
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 609
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a24ae31289bcce40800000000000000
+      internalID: 5678117198538359456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_76
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 609
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25770f9332c627400800000000000000
+      internalID: 320437422048442194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_77
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 609
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee96e5f7ccd84390800000000000000
+      internalID: -7833768800428843288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_78
+      rect:
+        serializedVersion: 2
+        x: 4044
+        y: 609
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f03725f8a23e3d0800000000000000
+      internalID: -3178650116941476063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_79
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 349
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4854d37110b9c09c0800000000000000
+      internalID: -3959619543378344572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_80
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 336
+        width: 172
+        height: 202
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bc1617a130ea670800000000000000
+      internalID: 8551776154529418076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_81
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 349
+        width: 177
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4349f2fff3c78acc0800000000000000
+      internalID: -3699570479578770380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_82
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 349
+        width: 192
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe800746be92f9860800000000000000
+      internalID: 7538790392220616943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_83
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 349
+        width: 227
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40ec7a86d1dbc740800000000000000
+      internalID: 5173459316341792845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_84
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 349
+        width: 182
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7c5cfdeb007f9e0800000000000000
+      internalID: -1587799523826743345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_85
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 349
+        width: 157
+        height: 187
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada03b76de7bd8400800000000000000
+      internalID: 328120578142833370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_86
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 349
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc8cfc0264e13a00800000000000000
+      internalID: 734619324013907153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_87
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 349
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dbf212916294900800000000000000
+      internalID: 669107909014043951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_88
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 359
+        width: 162
+        height: 182
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10cced38f94746430800000000000000
+      internalID: 3775270616104356865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_89
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f179c51de4af0a0800000000000000
+      internalID: -6847073622354878713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_90
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbc77a371becd9c0800000000000000
+      internalID: -3900984692211987508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_91
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650109fc4ec4a9cf0800000000000000
+      internalID: -244798684119691178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_92
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67da8e7bf2eb4e40800000000000000
+      internalID: 5641852527999375214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_93
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d6bb9a219b067f0800000000000000
+      internalID: -621293258768945895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_94
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcaab1caa6531db60800000000000000
+      internalID: 7769049564461116107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_95
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1201ecf1052aca290800000000000000
+      internalID: -7877743183163158495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_96
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e5e0c4d9c0c8ad0800000000000000
+      internalID: -2698768206976360893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_97
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c09a052434a93c0800000000000000
+      internalID: -4352092137800004520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_98
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 49
+        width: 172
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5be0c184e8bc5920800000000000000
+      internalID: 2980460344981384028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_99
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 49
+        width: 167
+        height: 192
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135cab7ce7a826cd0800000000000000
+      internalID: -2566336560526342863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_100
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 49
+        width: 157
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b40ea49c15802d0800000000000000
+      internalID: -3312307600944510073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_101
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 49
+        width: 172
+        height: 197
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a4f64c48ac66b90800000000000000
+      internalID: -7248883878626112892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_102
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 159
+        width: 117
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fed836f312db1bd0800000000000000
+      internalID: -2658300171855012104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_103
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 159
+        width: 117
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a0e2cbfc7a65560800000000000000
+      internalID: 7302208356485040705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_104
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 159
+        width: 117
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ad08de960023da0800000000000000
+      internalID: -5966706101356275078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_105
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f2d6a2f5a20c220800000000000000
+      internalID: 2504047981040054152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_106
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4442cb2322430eaf0800000000000000
+      internalID: -369237847959657404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_107
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfaa14006fdaaf90800000000000000
+      internalID: -6941490272159486030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessSpriteSheett_108
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a4335673f24b330800000000000000
+      internalID: 3725654706709809719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 66e38fc20333479489dd45de17096a21
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      princessSpriteSheett_0: -8301660050772891051
+      princessSpriteSheett_1: 7541803170329266216
+      princessSpriteSheett_10: 6750256779367307610
+      princessSpriteSheett_100: -3312307600944510073
+      princessSpriteSheett_101: -7248883878626112892
+      princessSpriteSheett_102: -2658300171855012104
+      princessSpriteSheett_103: 7302208356485040705
+      princessSpriteSheett_104: -5966706101356275078
+      princessSpriteSheett_105: 2504047981040054152
+      princessSpriteSheett_106: -369237847959657404
+      princessSpriteSheett_107: -6941490272159486030
+      princessSpriteSheett_108: 3725654706709809719
+      princessSpriteSheett_11: 1432631025452588231
+      princessSpriteSheett_12: -5743460187358275092
+      princessSpriteSheett_13: 4799281113767334036
+      princessSpriteSheett_14: 6558021962710034163
+      princessSpriteSheett_15: 5817576781759233321
+      princessSpriteSheett_16: -8788354549214857579
+      princessSpriteSheett_17: -7450283301054143255
+      princessSpriteSheett_18: 5294509999579661666
+      princessSpriteSheett_19: 2820696097750523905
+      princessSpriteSheett_2: -7493127567261788251
+      princessSpriteSheett_20: -9176531096035345786
+      princessSpriteSheett_21: -7539571249013784964
+      princessSpriteSheett_22: 7403591269037077917
+      princessSpriteSheett_23: -8273186774561511948
+      princessSpriteSheett_24: -8243471044064871268
+      princessSpriteSheett_25: -3256491827147310972
+      princessSpriteSheett_26: 1790530623344429028
+      princessSpriteSheett_27: -1159314646807329266
+      princessSpriteSheett_28: 9162404462962863141
+      princessSpriteSheett_29: -4873583669187836539
+      princessSpriteSheett_3: 8546439710406091631
+      princessSpriteSheett_30: 7555427473715492478
+      princessSpriteSheett_31: 5379671617925997191
+      princessSpriteSheett_32: 4039024789141751829
+      princessSpriteSheett_33: -1584323859131815014
+      princessSpriteSheett_34: 5664069571806118216
+      princessSpriteSheett_35: 8942642710687516114
+      princessSpriteSheett_36: -5168592650871071739
+      princessSpriteSheett_37: -819368292806990052
+      princessSpriteSheett_38: 6386370782353628485
+      princessSpriteSheett_39: -6491974160580704303
+      princessSpriteSheett_4: -5992705903031687371
+      princessSpriteSheett_40: -8013252525851814259
+      princessSpriteSheett_41: -3865574655351090512
+      princessSpriteSheett_42: -4315943398702118089
+      princessSpriteSheett_43: -1854257755122848675
+      princessSpriteSheett_44: -391059892027572987
+      princessSpriteSheett_45: -4193712010367258583
+      princessSpriteSheett_46: -4777868173437974331
+      princessSpriteSheett_47: 3942123569944421322
+      princessSpriteSheett_48: 3106101836865035054
+      princessSpriteSheett_49: -4079774622479133546
+      princessSpriteSheett_5: -2762589861410356583
+      princessSpriteSheett_50: 6521915274555939754
+      princessSpriteSheett_51: -3866312645951158825
+      princessSpriteSheett_52: 4584518498301064938
+      princessSpriteSheett_53: -1648622404607225649
+      princessSpriteSheett_54: 2471636361666522353
+      princessSpriteSheett_55: 2916218646621364243
+      princessSpriteSheett_56: 225741209437640905
+      princessSpriteSheett_57: 969496525151550466
+      princessSpriteSheett_58: -4226991737724152632
+      princessSpriteSheett_59: 5178360427721202944
+      princessSpriteSheett_6: 2492581810869975531
+      princessSpriteSheett_60: 1170027363754621500
+      princessSpriteSheett_61: -3390368034764252318
+      princessSpriteSheett_62: 4555209485624585043
+      princessSpriteSheett_63: 7816481205052471507
+      princessSpriteSheett_64: -5650009156003588092
+      princessSpriteSheett_65: 7683055608469528202
+      princessSpriteSheett_66: 7878994055303637403
+      princessSpriteSheett_67: -2443901936979721942
+      princessSpriteSheett_68: 7291568427241198552
+      princessSpriteSheett_69: -1621345904054817662
+      princessSpriteSheett_7: -987184782383924962
+      princessSpriteSheett_70: 3546100807967748840
+      princessSpriteSheett_71: 4455705983056154731
+      princessSpriteSheett_72: 883431306907624004
+      princessSpriteSheett_73: -9107058308293345033
+      princessSpriteSheett_74: -8722910412905687780
+      princessSpriteSheett_75: 5678117198538359456
+      princessSpriteSheett_76: 320437422048442194
+      princessSpriteSheett_77: -7833768800428843288
+      princessSpriteSheett_78: -3178650116941476063
+      princessSpriteSheett_79: -3959619543378344572
+      princessSpriteSheett_8: 9066171074371947344
+      princessSpriteSheett_80: 8551776154529418076
+      princessSpriteSheett_81: -3699570479578770380
+      princessSpriteSheett_82: 7538790392220616943
+      princessSpriteSheett_83: 5173459316341792845
+      princessSpriteSheett_84: -1587799523826743345
+      princessSpriteSheett_85: 328120578142833370
+      princessSpriteSheett_86: 734619324013907153
+      princessSpriteSheett_87: 669107909014043951
+      princessSpriteSheett_88: 3775270616104356865
+      princessSpriteSheett_89: -6847073622354878713
+      princessSpriteSheett_9: -5377679641341342674
+      princessSpriteSheett_90: -3900984692211987508
+      princessSpriteSheett_91: -244798684119691178
+      princessSpriteSheett_92: 5641852527999375214
+      princessSpriteSheett_93: -621293258768945895
+      princessSpriteSheett_94: 7769049564461116107
+      princessSpriteSheett_95: -7877743183163158495
+      princessSpriteSheett_96: -2698768206976360893
+      princessSpriteSheett_97: -4352092137800004520
+      princessSpriteSheett_98: 2980460344981384028
+      princessSpriteSheett_99: -2566336560526342863
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,38 +1,34 @@
 using UnityEngine;
 using System;
-
+using System.Collections.Generic;
 public class ShieldProjectile : MonoBehaviour
 {
     public Transform player;
     public Rigidbody2D rb;
-    private float speed;
-    private Action onReturnComplete;
-
-    private Vector2 launchDirection;
-    private bool returning = false;
-    private float maxDistance = 8f;
-    private Vector2 startPos;
-
-    [Header("Damage Settings")]
-    public int damage = 1; // How much damage the shield does
-    public string enemyTag = "Enemy"; // Tag used for enemies
-    public bool destroyOnHit = false; // Whether to destroy on hitting an enemy
-
-    // Initialize with direction and speed
+    float speed;
+    public int damage = 1;
+    public string enemyTag = "Enemy";
+    public bool destroyOnHit = false;
+    Action onReturnComplete;
+    Vector2 launchDirection;
+    bool returning = false;
+    float maxDistance = 8f;
+    Vector2 startPos;
+    bool isDestroyed = false;
+    HashSet<GameObject> hitEnemies = new HashSet<GameObject>();
     public void Init(Transform playerTransform, float projectileSpeed, Action onReturn, float facingDir)
     {
         player = playerTransform;
         speed = projectileSpeed;
         onReturnComplete = onReturn;
         rb = GetComponent<Rigidbody2D>();
-
         startPos = transform.position;
         launchDirection = new Vector2(facingDir, 0).normalized;
         rb.linearVelocity = launchDirection * speed;
     }
-
     void Update()
     {
+        if (isDestroyed) return;
         if (!returning)
         {
             if (Vector2.Distance(startPos, transform.position) >= maxDistance)
@@ -42,36 +38,41 @@ public class ShieldProjectile : MonoBehaviour
         {
             Vector2 direction = ((Vector2)player.position - (Vector2)transform.position).normalized;
             rb.linearVelocity = direction * speed;
-
             if (Vector2.Distance(transform.position, player.position) < 1f)
-            {
-                onReturnComplete?.Invoke();
-                Destroy(gameObject);
-            }
+                ReturnAndDestroy();
         }
     }
-
     void StartReturn()
     {
         returning = true;
+        hitEnemies.Clear();
     }
-
-    // Detect collisions with enemies (uses tag instead of layer)
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(enemyTag))
+        if (isDestroyed) return;
+        GameObject root = collision.transform.root.gameObject;
+        if (hitEnemies.Contains(root)) return;
+        if (!collision.CompareTag(enemyTag) && !root.CompareTag(enemyTag)) return;
+        hitEnemies.Add(root);
+        EnemyHP enemy = root.GetComponent<EnemyHP>() ?? collision.GetComponent<EnemyHP>();
+        if (enemy != null)
+            enemy.TakeDamage(damage);
+        if (destroyOnHit)
+            ReturnAndDestroy();
+    }
+    void ReturnAndDestroy()
+    {
+        if (isDestroyed) return;
+        isDestroyed = true;
+        onReturnComplete?.Invoke();
+        Destroy(gameObject);
+    }
+    void OnDestroy()
+    {
+        if (!isDestroyed)
         {
-            var enemy = collision.GetComponent<EnemyHP>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
-
-            if (destroyOnHit)
-            {
-                onReturnComplete?.Invoke();
-                Destroy(gameObject);
-            }
+            isDestroyed = true;
+            onReturnComplete?.Invoke();
         }
     }
 }

@@ -64,8 +64,8 @@ Transform:
   m_GameObject: {fileID: 579567219104033050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6, y: -3.1, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.6, y: -3.1059, z: 0}
+  m_LocalScale: {x: -0.55452, y: 0.55452, z: 0.55452}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5211582857027659944}
@@ -75,6 +75,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5866705330509003428
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,6 +94,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -114,10 +117,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1126043561
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2820143329777312509, guid: daf630f404b6fa04ab415d698dad552d, type: 3}
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 607204020, guid: 72c20918bb68afc42a80f9533b3d8929, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +131,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1161381317975435961
 BoxCollider2D:
@@ -162,17 +166,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05013442, y: 0.48082066}
+  m_Offset: {x: -0.061011195, y: -0.15729833}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.12, y: 0.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.89973116, y: 0.955101}
+  m_Size: {x: 1.1535285, y: 1.3176684}
   m_EdgeRadius: 0
 --- !u!50 &5662778918614146048
 Rigidbody2D:
@@ -217,11 +221,12 @@ MonoBehaviour:
   walk: 3
   Detection: 5
   attackRange: 3
-  jumpHeight: 3.15
+  jumpHeight: 4.5
   jumpCooldown: 0.5
   chaseCooldown: 5
   attackCooldown: 0
   landingCooldown: 0.15
+  maxAttackDuration: 2
   bubble: {fileID: 1596270680980426064, guid: 23949c5dc46cd65468b02260cc1c8928, type: 3}
   spawnPoint: {fileID: 5211582857027659944}
   playerTag: Player
@@ -314,7 +319,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6374321
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

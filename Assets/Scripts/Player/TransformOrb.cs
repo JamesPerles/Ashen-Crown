@@ -1,38 +1,37 @@
 using UnityEngine;
-
 public class TransformOrb : MonoBehaviour
 {
     [SerializeField] public float speed = 5f;
-    public Transform player;
     [SerializeField] public float CollectionRNG = 0.5f;
     [SerializeField] public int value = 5;
-    private bool isFlying = false;
+    [SerializeField] string playerTag = "Player";
+    bool isFlying = false;
     void Update()
     {
-        if (isFlying && player != null)
+        if (!isFlying)
+            return;
+        GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
+        if (playerObj == null)
+            return;
+        Transform player = playerObj.transform;
+        Vector3 dir = (player.position - transform.position).normalized;
+        transform.position += dir * speed * Time.deltaTime;
+        if (Vector3.Distance(transform.position, player.position) < CollectionRNG)
         {
-            Vector3 dir = (player.position - transform.position).normalized;
-            transform.position += dir * speed * Time.deltaTime;
-            if (Vector3.Distance(transform.position, player.position) < CollectionRNG)
-            {
-                Collect();
-            }
+            Collect();
         }
     }
-
-    public void Activate(Transform target)
+    public void Activate()
     {
-        player = target;
         isFlying = true;
     }
-    private void Collect()
+    void Collect()
+{
+    TransformationGauge gauge = FindFirstObjectByType<TransformationGauge>();
+    if (gauge != null)
     {
-        TransformationGauge gauge = player.GetComponentInChildren<TransformationGauge>();
-        if (gauge != null)
-        {
-            gauge.AddEnergy(value);
-        }
-        Destroy(gameObject);
+        gauge.AddEnergy(value);
     }
-    }
-
+    Destroy(gameObject);
+}
+}

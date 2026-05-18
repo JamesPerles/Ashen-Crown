@@ -1,49 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerHeadUI : MonoBehaviour
 {
     [Header("References")]
-    public Image headImage;           // The small head UI image
-    public PlayerHealth playerHealth; // Reference to player health
-
+    public Image headImage;
+    public PlayerHealth playerHealth;
     [Header("Head Sprites")]
-    public Sprite headFullHP;         // 4 HP
-    public Sprite headThreeHP;        // 3 HP
-    public Sprite headTwoHP;          // 2 HP
-    public Sprite headOneHP;          // 1 HP
-    public Sprite headZeroHP;         // 0 HP
-
+    public Sprite headFullHP;
+    public Sprite headThreeHP;
+    public Sprite headTwoHP;
+    public Sprite headOneHP;
+    public Sprite headZeroHP;
     [Header("Flash Settings")]
     public Color flashColor = Color.red;
     public float flashDuration = 0.2f;
     private float flashTimer = 0f;
-
-    [Header("Dynamic Tracking")]
-    [SerializeField] private string playerTag = "Player"; // ✅ Tag to find player
-
-    private Sprite originalSprite;
-
+    [Header("Other")]
+    [SerializeField] string playerTag = "Player";
+    Sprite originalSprite;
     void Start()
     {
         if (headImage != null)
             originalSprite = headImage.sprite;
-
-        // ✅ Find player at start
         FindPlayer();
     }
-
     void Update()
     {
-        // ✅ Check if player is still valid, find new one if not
-        if (playerHealth == null || !playerHealth.gameObject.activeInHierarchy)
+        if (playerHealth == null)
         {
             FindPlayer();
         }
-
         if (playerHealth == null || headImage == null) return;
-
-        // Flashing when damaged
         if (flashTimer > 0)
         {
             headImage.color = flashColor;
@@ -53,33 +40,23 @@ public class PlayerHeadUI : MonoBehaviour
         {
             headImage.color = Color.white;
         }
-
         UpdateHeadSprite();
     }
-
-    // ✅ Find the active player in the scene
-    private void FindPlayer()
+    void FindPlayer()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
         if (playerObj != null)
         {
             playerHealth = playerObj.GetComponent<PlayerHealth>();
-            if (playerHealth == null)
-            {
-                Debug.LogWarning("⚠️ PlayerHeadUI: Found player but no PlayerHealth component!");
-            }
         }
     }
-
     public void FlashHead()
     {
         flashTimer = flashDuration;
     }
-
     void UpdateHeadSprite()
     {
-        int hp = Mathf.Max(0, Mathf.RoundToInt(playerHealth.currentHP)); // Clamp to 0+
-
+        int hp = Mathf.Max(0, Mathf.RoundToInt(playerHealth.currentHP));
         switch (hp)
         {
             case 4:

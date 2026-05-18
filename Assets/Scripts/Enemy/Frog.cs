@@ -1,54 +1,45 @@
 using UnityEngine;
-
+ 
 public class Frog : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] float speed = 3f;
-    [SerializeField] float walk = 3f;
+    [SerializeField] float walkRange = 3f;
     [SerializeField] float Detection = 5f;
     [SerializeField] float attackRange = 3f;
     [SerializeField] float jumpHeight = 5f;
     [SerializeField] float jumpCooldown = 2f;
     [SerializeField] float chaseCooldown = 5f;
     [SerializeField] float attackCooldown = 3f;
-    [SerializeField] float landingCooldown = 0.15f;
-    [SerializeField] float maxAttackDuration = 2f; // ✅ Safety timeout for attack
-
+    [SerializeField] float maxAttackDuration = 2f;
+    [SerializeField] string playerTag = "Player";
     [Header("References")]
     [SerializeField] GameObject bubble;
     [SerializeField] Transform spawnPoint;
-    [SerializeField] private string playerTag = "Player";
-    public SpriteRenderer sr;
-
+    [Header("Hitbox Checks")]
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundCheckDistance = 6f;
     [SerializeField] Transform wallCheck;
     [SerializeField] float wallCheckDistance = 0.3f;
     [SerializeField] LayerMask groundLayer;
-
-    private Transform Player;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private EnemyKnockback enemyKnockback;
-    private Vector3 startPos;
-
-    private float jumpTimer = 0f;
-    private float attackTimer = 0f;
-    private float chaseCooldownTimer = 0f;
-    private float landingTimer = 0f;
-    private float edgeCheckTimer = 0f;
-    private float attackStateTimer = 0f; // ✅ Tracks how long we've been in attack state
-
-    private int direction = 1;
-    private int lastDirection = 1;
-    private bool isChasing = false;
-    private bool hasFired = false;
-    private bool isAttacking = false;
-    private int attackDirection = 1;
-
-    private Vector3 spawnPointOriginalLocalPos;
-    private Vector3 groundCheckOriginalLocalPos;
-    private Vector3 wallCheckOriginalLocalPos;
+    [Header("Other")]
+    Rigidbody2D rb;
+    Animator animator;
+    EnemyKnockback enemyKnockback;
+    Transform Player;
+    Vector3 startPos;
+    Vector3 originalScale;
+    float jumpTimer = 0f;
+    float attackTimer = 0f;
+    float chaseCooldownTimer = 0f;
+    float edgeCheckTimer = 0f;
+    float attackStateTimer = 0f;
+    [SerializeField] float edgeCheckDelay = 0.1f;
+    int direction = 1;
+    int lastDirection = 1;
+    int attackDirection = 1;
+    bool isChasing = false;
+    bool isAttacking = false;
 
     void Start()
     {
@@ -56,81 +47,49 @@ public class Frog : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyKnockback = GetComponent<EnemyKnockback>();
         startPos = transform.position;
-
-        spawnPointOriginalLocalPos = spawnPoint.localPosition;
-
-        if (groundCheck != null)
-            groundCheckOriginalLocalPos = groundCheck.localPosition;
-        if (wallCheck != null)
-            wallCheckOriginalLocalPos = wallCheck.localPosition;
-
-        FindPlayer();
+        originalScale = transform.localScale;
     }
 
     void Update()
     {
-        if (Player == null || !Player.gameObject.activeInHierarchy)
-        {
             FindPlayer();
             if (Player == null) return;
-        }
-
-        // Timers
         jumpTimer -= Time.deltaTime;
         attackTimer -= Time.deltaTime;
         chaseCooldownTimer -= Time.deltaTime;
-        landingTimer -= Time.deltaTime;
         edgeCheckTimer -= Time.deltaTime;
 
         bool grounded = IsGrounded();
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
-        // ===== KNOCKBACK OVERRIDE =====
         if (enemyKnockback != null && enemyKnockback.isKnockedback)
         {
-            // Cancel attack - ✅ Also reset attack state timer
             if (isAttacking)
             {
                 isAttacking = false;
                 attackStateTimer = 0f;
-                animator.ResetTrigger("isAttacking");
                 animator.SetBool("isAttacking", false);
             }
-
-            // Stop AI movement; Rigidbody handles knockback
-            return; // Skip rest of Update
+            return;
         }
-        // ================================
 
-        // ✅ Safety timeout: Force end attack if it's been too long
         if (isAttacking)
         {
             attackStateTimer += Time.deltaTime;
             if (attackStateTimer >= maxAttackDuration)
             {
-                Debug.LogWarning("Frog attack state timed out - forcing EndAttack()");
                 EndAttack();
             }
         }
 
-        // Detect landing
-        if (!IsGrounded() && grounded)
-            landingTimer = landingCooldown;
-
-        // Update chasing state
         if (!isAttacking)
         {
             bool shouldChase = distanceToPlayer <= Detection && chaseCooldownTimer <= 0f;
-            if (shouldChase != isChasing)
-            {
-                isChasing = shouldChase;
-                hasFired = false;
-            }
+            isChasing = shouldChase;
         }
 
         int currentDirection = isAttacking ? attackDirection : direction;
 
-        // Movement
         if (!isAttacking)
         {
             if (isChasing)
@@ -139,26 +98,38 @@ public class Frog : MonoBehaviour
                 HandlePatrol(grounded);
         }
 
-        // Flip sprite & spawn point
+        animator.SetBool("isJumping", !grounded);
+
         if (currentDirection != lastDirection)
         {
-            sr.flipX = currentDirection < 0;
-
-            Vector3 localPos = spawnPointOriginalLocalPos;
-            localPos.x *= currentDirection;
-            spawnPoint.localPosition = localPos;
-
-            FlipGroundAndWallChecks();
-
+            FlipSprite(currentDirection);
             lastDirection = currentDirection;
         }
     }
 
-    private void FindPlayer()
+    void FindPlayer()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
         if (playerObj != null)
             Player = playerObj.transform;
+    }
+    void FlipSprite(int currentDirection)
+    {
+        transform.localScale = new Vector3(originalScale.x * currentDirection, 
+        originalScale.y, originalScale.z);
+    }
+
+    void HandlePatrol(bool grounded)
+    {
+        StopHittingWall(grounded);
+
+        float distanceFromStart = transform.position.x - startPos.x;
+        if (Mathf.Abs(distanceFromStart) > walkRange)
+            direction = distanceFromStart > 0 ? -1 : 1;
+
+        transform.position += new Vector3(direction * speed * Time.deltaTime, 0f, 0f);
+
+        Jumping();
     }
 
     void HandleChase()
@@ -166,66 +137,32 @@ public class Frog : MonoBehaviour
         float horizontalDistance = Player.position.x - transform.position.x;
         direction = horizontalDistance > 0 ? 1 : -1;
 
-        // Move
         transform.position += new Vector3(direction * speed * Time.deltaTime, 0f, 0f);
 
-        // Jump if grounded
-        if (jumpTimer <= 0f && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
-            animator.SetTrigger("isJumping");
-            jumpTimer = jumpCooldown;
-        }
+        Jumping();
 
-        // Attack
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
-        if (!hasFired && distanceToPlayer <= attackRange && attackTimer <= 0f)
+        if (distanceToPlayer <= attackRange && attackTimer <= 0f)
         {
-            attackDirection = (int)Mathf.Sign(Player.position.x - transform.position.x);
-
-            animator.SetTrigger("isAttacking");
+            attackDirection = (int)Mathf.Sign(horizontalDistance);
+            animator.SetBool("isAttacking", true);
             isAttacking = true;
-            attackStateTimer = 0f; // ✅ Reset timer when starting attack
-            hasFired = true;
+            attackStateTimer = 0f;
             attackTimer = attackCooldown;
             chaseCooldownTimer = chaseCooldown;
         }
     }
 
-    void HandlePatrol(bool grounded)
+    void Jumping()
     {
-        // Edge flip
-        if (grounded && edgeCheckTimer <= 0f && landingTimer <= 0f && IsAboutToFall())
-        {
-            direction *= -1;
-            edgeCheckTimer = 0.1f;
-        }
-
-        // Wall flip
-        if (IsHittingWall())
-        {
-            direction *= -1;
-            edgeCheckTimer = 0.1f;
-        }
-
-        // Patrol within range
-        float distanceFromStart = transform.position.x - startPos.x;
-        if (Mathf.Abs(distanceFromStart) > walk)
-            direction = distanceFromStart > 0 ? -1 : 1;
-
-        transform.position += new Vector3(direction * speed * Time.deltaTime, 0f, 0f);
-
-        // Jump
         if (jumpTimer <= 0f && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
-            animator.SetTrigger("isJumping");
+            animator.SetBool("isJumping", true);
             jumpTimer = jumpCooldown;
         }
     }
-
     bool IsGrounded() => Mathf.Abs(rb.linearVelocity.y) < 0.01f;
-
     bool IsAboutToFall()
     {
         if (groundCheck == null) return false;
@@ -240,23 +177,20 @@ public class Frog : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(wallCheck.position, Vector2.right * direction, wallCheckDistance, groundLayer);
         return hit.collider != null && !hit.collider.CompareTag(playerTag);
     }
-
-    void FlipGroundAndWallChecks()
+    void StopHittingWall(bool grounded)
     {
-        if (groundCheck != null)
+        if (grounded && edgeCheckTimer <= 0f && IsAboutToFall())
         {
-            Vector3 gcPos = groundCheckOriginalLocalPos;
-            gcPos.x *= direction;
-            groundCheck.localPosition = gcPos;
+            direction *= -1;
+            edgeCheckTimer = edgeCheckDelay;
         }
-        if (wallCheck != null)
+
+        if (IsHittingWall())
         {
-            Vector3 wcPos = wallCheckOriginalLocalPos;
-            wcPos.x *= direction;
-            wallCheck.localPosition = wcPos;
+            direction *= -1;
+            edgeCheckTimer = edgeCheckDelay;
         }
     }
-
     public void FireProjectile()
     {
         if (Player == null) return;
@@ -270,10 +204,11 @@ public class Frog : MonoBehaviour
     public void EndAttack()
     {
         isAttacking = false;
-        attackStateTimer = 0f; // ✅ Reset timer when attack ends normally
+        attackStateTimer = 0f;
+        animator.SetBool("isAttacking", false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag(playerTag))
             direction *= -1;

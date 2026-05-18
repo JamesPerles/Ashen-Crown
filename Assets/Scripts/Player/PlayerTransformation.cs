@@ -1,105 +1,143 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using System.Collections;
 
 public class PlayerTransformation : MonoBehaviour
 {
-    [SerializeField] private TransformationGauge transformationGauge;
-    [SerializeField] private GameObject transformedPrefab;
-    [SerializeField] private float transformationDuration = 10f;
-    [SerializeField] private float transformAnimationDuration = 1f;
-
-    private PlayerHealth playerHealth;
-    private Animator animator;
-    private bool isTransformed = false;
-    private bool isTransforming = false;
-    private CinemachineCamera vcam;
-
-    [System.Obsolete]
+    [Header("References")]
+    [SerializeField] TransformationGauge transformationGauge;
+    [SerializeField] GameObject normalForm;
+    [SerializeField] GameObject transformedForm;
+    [SerializeField] float transformAnimationDuration = 1f;
+    [SerializeField] float revertAnimationDuration = 1f;
+    [SerializeField] float drainRate = 1f;
+    PlayerHealth normalHealth;
+    PlayerHealth transformedHealth;
+    Animator normalAnimator;
+    Animator transformedAnimator;
+    CinemachineCamera vcam;
+    Vector3 hiddenPosition = new Vector3(-999f, -999f, 0f);
+    [HideInInspector] public bool isTransformed = false;
+    [HideInInspector] public bool isTransforming = false;
+    bool isReverting = false;
     void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
-        animator = GetComponent<Animator>();
-        
-        // Find the Cinemachine camera in the scene
-        vcam = FindObjectOfType<CinemachineCamera>();
+        normalHealth = normalForm.GetComponent<PlayerHealth>();
+        normalAnimator = normalForm.GetComponent<Animator>();
+        transformedHealth = transformedForm.GetComponent<PlayerHealth>();
+        transformedAnimator = transformedForm.GetComponent<Animator>();
+        vcam = FindFirstObjectByType<CinemachineCamera>();
+        transformedForm.SetActive(false);
     }
-
     void Update()
     {
-        // Prevent multiple transformation attempts
-        if (!isTransformed && !isTransforming && transformationGauge.IsFull() && Input.GetKeyDown(KeyCode.X))
+        if (!isTransformed && !isTransforming && transformationGauge.IsFull() &&
+            Input.GetKeyDown(KeyCode.X))
         {
-            PlayTransformAnimation();
+            StartCoroutine(TransformRoutine());
+        }
+        if (isTransformed && !isReverting)
+        {
+            transformationGauge.AddEnergy(-drainRate * Time.deltaTime);
+
+            if (transformationGauge.currentEnergy <= 0f)
+            {
+                StartCoroutine(RevertRoutine());
+            }
         }
     }
-
-    private void PlayTransformAnimation()
+    IEnumerator TransformRoutine()
     {
         isTransforming = true;
-        
-        if (animator != null)
+        PlayerController playerController = normalForm.GetComponent<PlayerController>();
+        Rigidbody2D normalRb = normalForm.GetComponent<Rigidbody2D>();
+        if (normalRb != null)
         {
-            animator.SetTrigger("isTransforming");
+            normalRb.linearVelocity = Vector2.zero;
+            normalRb.angularVelocity = 0f;
         }
-
-        Invoke(nameof(TransformPlayer), transformAnimationDuration);
-    }
-
-    void TransformPlayer()
-    {
+        if (playerController != null)
+            playerController.enabled = false;
+        if (normalAnimator != null)
+            normalAnimator.SetTrigger("isTransforming");
+        yield return new WaitForSeconds(transformAnimationDuration);
+        if (playerController != null)
+            playerController.enabled = true;
+        if (normalHealth != null && transformedHealth != null)
+            transformedHealth.currentHP = normalHealth.currentHP;
+        transformedForm.transform.position = normalForm.transform.position;
+        transformedForm.transform.rotation = normalForm.transform.rotation;
+        Rigidbody2D transformedRb = transformedForm.GetComponent<Rigidbody2D>();
+        if (transformedRb != null)
+        {
+            transformedRb.linearVelocity = Vector2.zero;
+            transformedRb.angularVelocity = 0f;
+        }
+        normalForm.tag = "Untagged";
+        transformedForm.tag = "Player";
+        if (normalRb != null)
+        {
+            normalRb.linearVelocity = Vector2.zero;
+            normalRb.bodyType = RigidbodyType2D.Kinematic;
+        }
+        normalForm.GetComponent<Collider2D>().enabled = false;
+        normalForm.GetComponent<SpriteRenderer>().enabled = false;
+        normalForm.transform.position = hiddenPosition;
+        transformedForm.SetActive(true);
+        if (vcam != null)
+        {
+            vcam.Follow = transformedForm.transform;
+            vcam.LookAt = transformedForm.transform;
+        }
         isTransformed = true;
-
-        float currentHP = playerHealth.currentHP;
-        Vector3 pos = transform.position;
-        Quaternion rot = transform.rotation;
-
-        // Spawn transformed version
-        GameObject newForm = Instantiate(transformedPrefab, pos, rot);
-        PlayerHealth newHealth = newForm.GetComponent<PlayerHealth>();
-        
-        // Set HP immediately - the updated PlayerHealth script won't overwrite it
-        newHealth.currentHP = currentHP;
-
-        // Update Cinemachine to follow new player
-        if (vcam != null)
-        {
-            vcam.Follow = newForm.transform;
-            vcam.LookAt = newForm.transform;
-        }
-
-        // Disable current player (this will hide its health bar)
-        gameObject.SetActive(false);
-
-        // Revert after time
-       // StartCoroutine(RevertAfterTime(newForm));
-    }
-
-    System.Collections.IEnumerator RevertAfterTime(GameObject newForm)
-    {
-        yield return new WaitForSeconds(transformationDuration);
-
-        // Get final HP and position from transformed form
-        PlayerHealth transformedHealth = newForm.GetComponent<PlayerHealth>();
-        float finalHP = transformedHealth.currentHP;
-        Vector3 pos = newForm.transform.position;
-        Quaternion rot = newForm.transform.rotation;
-
-        // Update Cinemachine to follow original player again
-        if (vcam != null)
-        {
-            vcam.Follow = transform;
-            vcam.LookAt = transform;
-        }
-
-        // Revert to base form
-        gameObject.transform.position = pos;
-        gameObject.transform.rotation = rot;
-        playerHealth.currentHP = finalHP; // Set HP before activating
-        gameObject.SetActive(true);
-
-        Destroy(newForm);
-
-        isTransformed = false;
         isTransforming = false;
+    }
+    IEnumerator RevertRoutine()
+    {
+        isReverting = true;
+        PlayerController transformedController = transformedForm.GetComponent<PlayerController>();
+        Rigidbody2D transformedRb = transformedForm.GetComponent<Rigidbody2D>();
+        if (transformedRb != null)
+        {
+            transformedRb.linearVelocity = Vector2.zero;
+            transformedRb.angularVelocity = 0f;
+        }
+        if (transformedController != null)
+            transformedController.enabled = false;
+        if (transformedAnimator != null)
+            transformedAnimator.SetBool("isReverting", true);
+        if (normalAnimator != null)
+            normalAnimator.SetBool("isReverting", true);
+        yield return new WaitForSeconds(revertAnimationDuration);
+        if (transformedController != null)
+            transformedController.enabled = true;
+        if (transformedAnimator != null)
+            transformedAnimator.SetBool("isReverting", false);
+        if (normalAnimator != null)
+            normalAnimator.SetBool("isReverting", false);
+        if (normalHealth != null && transformedHealth != null)
+            normalHealth.currentHP = transformedHealth.currentHP;
+        normalForm.transform.position = transformedForm.transform.position;
+        normalForm.transform.rotation = transformedForm.transform.rotation;
+        Rigidbody2D rb = normalForm.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        normalForm.GetComponent<Collider2D>().enabled = true;
+        normalForm.GetComponent<SpriteRenderer>().enabled = true;
+        transformedForm.tag = "Untagged";
+        normalForm.tag = "Player";
+        transformedForm.SetActive(false);
+        if (vcam != null)
+        {
+            vcam.Follow = normalForm.transform;
+            vcam.LookAt = normalForm.transform;
+        }
+        isTransformed = false;
+        isReverting = false;
+        yield return null;
     }
 }

@@ -2,26 +2,21 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float speed = 5f;
-    private Vector2 moveDirection;
-
-    [Header("Damage Settings")]
-    [SerializeField] private float damageAmount = 1f;
-    [SerializeField] private string playerTag = "Player";
-
-    [Header("Collision Settings")]
-    [SerializeField] public LayerMask groundLayer; // ✅ Layer to detect ground
-    [SerializeField] private float groundCheckRadius = 0.05f; // radius for overlap check
-
-    [Header("Sound Effects")]
-    [SerializeField] private AudioClip destroySFX;
-    private AudioSource audioSource;
-    private bool isDestroying = false;
-
+    [Header("Bubble Settings")]
+    public float speed = 0.1f;
+    public float lifetime = 5f;
+    Vector2 moveDirection;
+    public float floatAmplitude = 10f;
+    public float floatFrequency = 10f;
+    float floatTimer = 0f;
+    [SerializeField] float damageAmount = 1f;
+    [SerializeField] string playerTag = "Player";
+    [SerializeField] string enemyTag = "Enemy";
+    [SerializeField] AudioClip destroySFX;
+    AudioSource audioSource;
+    bool isDestroying = false;
     void Awake()
     {
-        // Ensure AudioSource exists
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -29,66 +24,46 @@ public class Bubble : MonoBehaviour
             audioSource.playOnAwake = false;
         }
     }
-
     public void Initialize(Vector3 targetPosition)
     {
-        moveDirection = (targetPosition - transform.position).normalized;
-
-        // Rotate bubble toward target
-        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        moveDirection = new Vector2(targetPosition.x > transform.position.x ? 1f : -1f, 0f);
     }
-
     void Update()
     {
         if (!isDestroying)
-            transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
-
-        // ✅ Ground check using OverlapCircle to detect inside ground
-        if (!isDestroying)
         {
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
-            if (hit != null)
+            floatTimer += Time.deltaTime;
+            float verticalOffset = Mathf.PingPong(floatTimer * floatFrequency, floatAmplitude) - floatAmplitude / 2f;
+            transform.position += new Vector3(moveDirection.x * speed * Time.deltaTime, verticalOffset * Time.deltaTime, 0);
+            lifetime -= Time.deltaTime;
+            if (lifetime <= 0)
                 DestroyBubble();
         }
     }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (isDestroying) return;
-
         if (collision.CompareTag(playerTag))
         {
-            var playerHealth = collision.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            if (collision.TryGetComponent(out PlayerHealth playerHealth))
                 playerHealth.TakeDamage(damageAmount);
-
             DestroyBubble();
         }
-        else if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        else if (!collision.CompareTag(playerTag) && !collision.CompareTag(enemyTag))
         {
             DestroyBubble();
         }
     }
-
-    private void DestroyBubble()
+    void DestroyBubble()
     {
         if (isDestroying) return;
-
         isDestroying = true;
-
-        // Play destroy SFX
         if (destroySFX != null)
             audioSource.PlayOneShot(destroySFX);
-
-        // Disable visuals and collider
-        var sprite = GetComponent<SpriteRenderer>();
-        if (sprite != null) sprite.enabled = false;
-
-        var collider = GetComponent<Collider2D>();
-        if (collider != null) collider.enabled = false;
-
-        // Destroy after SFX finishes
+        if (TryGetComponent(out SpriteRenderer sprite))
+            sprite.enabled = false;
+        if (TryGetComponent(out Collider2D col))
+            col.enabled = false;
         Destroy(gameObject, destroySFX != null ? destroySFX.length : 0.05f);
     }
 }

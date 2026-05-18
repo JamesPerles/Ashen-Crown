@@ -8,6 +8,11 @@ TagManager:
   - Enemy
   - Attack
   - WorldCan
+  - Book
+  - Enemy2
+  - Goal
+  - RetryButton
+  - WinButton
   layers:
   - Default
   - TransparentFX

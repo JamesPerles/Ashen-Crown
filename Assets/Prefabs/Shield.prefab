@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4817967061014266236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9885564, y: -1.5897588, z: 0}
+  m_LocalPosition: {x: -4.124, y: -1.483, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38,6 +38,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &369129010597731103
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -56,6 +57,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,10 +80,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1126043561
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6717884257390833292, guid: 84d50e2474c6a5343a57b1e29d0aacea, type: 3}
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 990621628, guid: 4afa2157db7cbbe4f8978547c6435b42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +94,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7563498846903919873
 MonoBehaviour:
@@ -105,6 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5170973061812425233, guid: 378ee1b9ce94372448b0d2757e9448f7, type: 3}
   rb: {fileID: 6560783676911721688}
+  damage: 1
+  enemyTag: Enemy
+  destroyOnHit: 0
 --- !u!50 &6560783676911721688
 Rigidbody2D:
   serializedVersion: 5
@@ -166,17 +173,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.18730474, y: -0.1774897}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.25}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 0.5, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 0.25}
+  m_Size: {x: 0.6096015, y: 0.37596023}
   m_EdgeRadius: 0
 --- !u!114 &5234147000511413588
 MonoBehaviour:
@@ -190,3 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c7fa2a21e295442a4cd49af62b37a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  enemyTag: Enemy
+  destroyOnHit: 1

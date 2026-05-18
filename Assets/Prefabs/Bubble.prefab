@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6710944436918890972}
   - component: {fileID: 5888967601582134206}
   - component: {fileID: 7285921267329324405}
+  - component: {fileID: 6079620537426879828}
   m_Layer: 0
   m_Name: Bubble
-  m_TagString: Enemy
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,14 +30,15 @@ Transform:
   m_GameObject: {fileID: 1596270680980426064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7521, y: -2.0893, z: 0}
-  m_LocalScale: {x: 0.3014, y: 0.3014, z: 0.3014}
+  m_LocalPosition: {x: -6.768, y: -2.097, z: 0}
+  m_LocalScale: {x: 0.4133606, y: 0.4133606, z: 0.41336066}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7412436321701207305
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -55,6 +57,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,10 +80,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1126043561
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5712959122012955994, guid: 9ab8b30cb37d0ca44b042bf024f2200f, type: 3}
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 8240329854629693015, guid: 4c73c10fe8035c449a9ebb4a6e636dde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +94,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &6710944436918890972
 CircleCollider2D:
@@ -120,12 +125,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0016650836, y: 0}
-  m_Radius: 0.41485697
+  m_Offset: {x: -0.6849925, y: -0.010315582}
+  m_Radius: 0.7632
 --- !u!114 &5888967601582134206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,12 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4e8cccd09d208478954bd906b8bdf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
+  lifetime: 5
+  floatAmplitude: 3
+  floatFrequency: 4
   damageAmount: 1
   playerTag: Player
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  enemyTag: Enemy
   destroySFX: {fileID: 8300000, guid: 5d798c93f52cc804aa5325994b4459ab, type: 3}
 --- !u!82 &7285921267329324405
 AudioSource:
@@ -166,7 +172,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.29722786
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -242,3 +248,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &6079620537426879828
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596270680980426064}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

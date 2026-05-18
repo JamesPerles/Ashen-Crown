@@ -1,119 +1,172 @@
-using Unity.VisualScripting;
 using UnityEngine;
-
+using System.Collections;
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float runSpeed = 2f;
+    [SerializeField] float runMultiplier = 2f;
     [SerializeField] float jump = 5f;
-    [SerializeField] float rayLength = 0.5f;
-    [SerializeField] int HP = 5;
+    [Header("Ground Check")]
+    [SerializeField] float groundCheckWidth = 0.5f;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    public Transform projectileSpawnPoint; // Assign from inspector
-
-    bool isGrounded = false;
-    bool isWalking = false;
-    bool isRunning = false;
-    private bool isDead = false;
-
-    private float baseSpeed;
+    [Header("Other")]
+    public Transform projectileSpawnPoint;
     public Rigidbody2D rb;
-    private Animator animator;
-    private SpriteRenderer sr;
-
-    private PlayerKnockback knockback;
-
-    [HideInInspector] public bool canMove = true;
-
+    Animator animator;
+    PlayerKnockback knockback;
+    bool isGrounded;
+    bool isWalking;
+    bool isRunning;
+    bool isDead;
+    public bool canMove = true;
+    float baseSpeed;
+    int direction = 1;
+    Vector3 originalScale;
+    [SerializeField] float dive = -10f;
+    [SerializeField] float diveMove = 10f;
+    public bool isDiving;
+    bool isDashing;
+    [SerializeField] float dashDist = 5f;
+    [SerializeField] float dashTime = 0.2f;
+    public float coyoteTime = 0.2f;
+    bool runLatched = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
-        baseSpeed = moveSpeed;
-
         knockback = GetComponent<PlayerKnockback>();
+        baseSpeed = moveSpeed;
+        originalScale = transform.localScale;
     }
-
     void Update()
     {
+        if (isGrounded)
+        {
+            isDiving = false;
+            animator.SetBool("isDiving", false);
+        }
         if (isDead) return;
-        if (knockback != null && knockback.isKnockedback) return;
-
-        // Horizontal movement
-        float moveX = Input.GetAxis("Horizontal");
-        if (canMove)
-            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
-        else
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-
-        // Walking/Running animations
+        if (knockback != null && knockback.IsKnockedback) return;
+        float moveX = Input.GetAxisRaw("Horizontal");
+        if (!isDiving && !isDashing)
+        {
+            if (canMove)
+                rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+            else
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
         isWalking = moveX != 0;
         animator.SetBool("isWalking", isWalking);
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            moveSpeed = baseSpeed * runSpeed;
-            isRunning = true;
-        }
-        else
-        {
-            moveSpeed = baseSpeed;
-            isRunning = false;
-        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            runLatched = true;
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            runLatched = false;
+        isRunning = runLatched;
+        moveSpeed = isRunning ? baseSpeed * runMultiplier : baseSpeed;
         animator.SetBool("isRunning", isRunning);
-
-        // Flip sprite
-        if (moveX > 0) sr.flipX = false;
-        else if (moveX < 0) sr.flipX = true;
-
-        // Make projectile spawn point follow player facing
-        if (projectileSpawnPoint != null)
-        {
-            projectileSpawnPoint.localPosition = new Vector3(
-                sr.flipX ? -Mathf.Abs(projectileSpawnPoint.localPosition.x) : Mathf.Abs(projectileSpawnPoint.localPosition.x),
-                projectileSpawnPoint.localPosition.y,
-                projectileSpawnPoint.localPosition.z
-            );
-        }
-
-        // Ground check
         bool wasGrounded = isGrounded;
-        isGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, rayLength, groundLayer);
-
-        // Jump
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        isGrounded = Physics2D.OverlapBox(
+            groundCheck.position,
+            new Vector2(groundCheckWidth * 2f, 0.1f),
+            0f,
+            groundLayer
+        );
+        if (Input.GetButtonDown("Jump") && isGrounded || Input.GetButtonDown("Jump") && coyoteTime > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jump);
             animator.SetBool("isJumping", true);
         }
-
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !isGrounded)
+        {
+            DiveKick();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Dash();
+        }
+        if (!isGrounded)
+        {
+            coyoteTime -= Time.deltaTime;
+        }
         if (!wasGrounded && isGrounded)
         {
             animator.SetBool("isJumping", false);
+            coyoteTime = 0.2f;
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (moveX > 0)
+            direction = 1;
+        else if (moveX < 0)
+            direction = -1;
+        FlipSprite();
+        if (direction == -1)
         {
-            HP -= 1;
+            diveMove = -10;
+            dashDist = -20;
+        }
+        if (direction == 1)
+        {
+            diveMove = 10;
+            dashDist = 20;
+        }
+        if (dashTime <= 0)
+        {
+            isDashing = false;
+            animator.SetBool("isDashing", false);
+        }
+        if (isDiving == true)
+        {
+            animator.SetBool("isDiving", true);
+        }
+        if (isDashing == false)
+        {
+            dashTime = 0.2f;
+        }
+        if (isDashing == true)
+        {
+            dashTime -= Time.deltaTime;
         }
     }
-
-    public void SetMovementEnabled(bool enabled)
+    void FlipSprite()
+    {
+        transform.localScale = new Vector3(originalScale.x * direction, originalScale.y, originalScale.z);
+    }
+    public void SetMoveEnabled(bool enabled)
     {
         canMove = enabled;
     }
-
     public void OnPlayerDeath()
     {
         isDead = true;
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", false);
         animator.SetBool("isJumping", false);
+        animator.SetBool("isDiving", false);
         rb.linearVelocity = Vector2.zero;
     }
-}
+    public void DiveKick()
+    {
+        isDiving = true;
+        rb.linearVelocity = new Vector2(diveMove, dive);
+        StartCoroutine(DiveInvincibility());
+    }
+    public void Dash()
+    {
+        isDashing = true;
+        animator.SetBool("isDashing", true);
+        rb.linearVelocity = new Vector2(dashDist, 0f);
+        StartCoroutine(DashInvincibility());
+    }
+    IEnumerator DiveInvincibility()
+    {
+        knockback.AddInvincibility();
+        yield return new WaitUntil(() => !isDiving);
+        knockback.RemoveInvincibility();
+    }
+    IEnumerator DashInvincibility()
+    {
+        knockback.AddInvincibility();
+        yield return new WaitUntil(() => !isDashing);
+        knockback.RemoveInvincibility();
+    }
+    }

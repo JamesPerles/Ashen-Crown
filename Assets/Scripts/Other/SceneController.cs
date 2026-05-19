@@ -17,6 +17,7 @@ public class SceneController : MonoBehaviour
         FindGoal();
         FindRetryButton();
         FindWinButton();
+        FindStartButton();
     }
     void OnDestroy()
     {
@@ -27,6 +28,7 @@ public class SceneController : MonoBehaviour
         FindGoal();
         FindRetryButton();
         FindWinButton();
+        FindStartButton();
     }
     void FindGoal()
     {
@@ -54,6 +56,15 @@ public class SceneController : MonoBehaviour
         if (button == null) return;
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(LoadFirstScene);
+    }
+    void FindStartButton()
+    {
+        GameObject buttonObj = GameObject.FindGameObjectWithTag("StartButton");
+        if (buttonObj == null) return;
+        Button button = buttonObj.GetComponent<Button>();
+        if (button == null) return;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(LoadNextScene);
     }
     void Update()
     {

@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 285810627901849566}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.48, y: -1.05, z: 0}
+  m_LocalPosition: {x: -4.24, y: -2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -242,7 +242,7 @@ MonoBehaviour:
   moveSpeed: 7
   runMultiplier: 2
   jump: 14.5
-  rayLength: 0.5
+  groundCheckWidth: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -369,7 +369,6 @@ MonoBehaviour:
   playerHealth: {fileID: 5338450865040608120}
   playerCollider: {fileID: 4434453634885700006}
   playerAttack: {fileID: 0}
-  IsInvincible: 0
 --- !u!82 &2163726639533813391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -736,7 +735,7 @@ MonoBehaviour:
   transformedForm: {fileID: 0}
   transformAnimationDuration: 1
   revertAnimationDuration: 1
-  drainRate: 10
+  drainRate: 2
   isTransformed: 0
   isTransforming: 0
 --- !u!114 &7943402592108918919

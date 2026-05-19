@@ -13,6 +13,7 @@ TagManager:
   - Goal
   - RetryButton
   - WinButton
+  - StartButton
   layers:
   - Default
   - TransparentFX

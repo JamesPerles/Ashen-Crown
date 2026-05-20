@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5170973061812425233, guid: 378ee1b9ce94372448b0d2757e9448f7, type: 3}
   rb: {fileID: 6560783676911721688}
-  damage: 1
+  damage: 2
   enemyTag: Enemy
   destroyOnHit: 0
 --- !u!50 &6560783676911721688

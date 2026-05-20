@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c7fa2a21e295442a4cd49af62b37a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
-  damage: 1
+  damage: 2
   enemyTag: Enemy
   destroyOnHit: 1

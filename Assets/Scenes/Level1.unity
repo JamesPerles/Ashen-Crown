@@ -243,11 +243,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8722472764893274912, guid: df3366c3e5449794ca2813c2528a0f29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.11
+      value: 28.43
       objectReference: {fileID: 0}
     - target: {fileID: 8722472764893274912, guid: df3366c3e5449794ca2813c2528a0f29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.3
+      value: 10.78
       objectReference: {fileID: 0}
     - target: {fileID: 8722472764893274912, guid: df3366c3e5449794ca2813c2528a0f29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48001,7 +48001,7 @@ MonoBehaviour:
   transformedForm: {fileID: 1962218618}
   transformAnimationDuration: 1
   revertAnimationDuration: 1
-  drainRate: 10
+  drainRate: 1
   isTransformed: 0
   isTransforming: 0
 --- !u!114 &2021338715

@@ -1,7 +1,6 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using System.Collections;
-
 public class PlayerTransformation : MonoBehaviour
 {
     [Header("References")]

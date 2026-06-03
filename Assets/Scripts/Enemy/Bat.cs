@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class Bat : MonoBehaviour
 {
     [Header("Movement Settings")]

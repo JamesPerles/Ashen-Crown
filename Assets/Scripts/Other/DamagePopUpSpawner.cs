@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-
 public class DamagePopUpSpawner : MonoBehaviour
 {
     public static DamagePopUpSpawner Instance;

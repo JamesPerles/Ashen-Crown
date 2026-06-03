@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using Unity.Cinemachine;
-
 public class CutsceneController : MonoBehaviour
 {
     [Header("Timeline & Dialogue")]

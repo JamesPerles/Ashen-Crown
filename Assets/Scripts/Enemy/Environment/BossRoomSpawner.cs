@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class BossRoomSpawner : MonoBehaviour
 {
 public GameObject wall;

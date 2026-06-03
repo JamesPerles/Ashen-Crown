@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class EnemyHP : MonoBehaviour
 {
     [SerializeField] public float HP = 3f;

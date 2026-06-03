@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Flash Settings")]

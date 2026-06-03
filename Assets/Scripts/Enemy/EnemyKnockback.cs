@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-
 public class EnemyKnockback : MonoBehaviour
 {
     [Header("Knockback Settings")]

@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class Bubble : MonoBehaviour
 {
     [Header("Bubble Settings")]

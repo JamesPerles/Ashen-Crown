@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-
 public class DamagePop : MonoBehaviour
 {
     [SerializeField] float speed = 3f;

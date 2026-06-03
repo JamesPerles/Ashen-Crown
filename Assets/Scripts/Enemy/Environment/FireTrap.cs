@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class FireTrap : MonoBehaviour
 {
     [SerializeField] Collider2D[] damageHitbox;
